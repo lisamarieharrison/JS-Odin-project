@@ -1,0 +1,17 @@
+<head>
+	<script>
+	
+		//find to return number of vowels in string
+		function vowel_count(x) {
+			var nvowel = 0
+			for(var i = 0; i < x.length; i++) {
+				if(x[i] == "a" || x[i] == "e" || x[i] == "i" || x[i] == "o" || x[i] == "u") {
+					nvowel = nvowel + 1
+				}
+			}
+			return nvowel
+		}
+
+		console.log(vowel_count("odin"))
+	</script>
+</head>

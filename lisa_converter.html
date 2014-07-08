@@ -1,0 +1,230 @@
+<head>
+	<script>
+		//convert meters to feet
+		function metersFeet() {
+			var xElement = document.getElementById('input');
+			var x = xElement.value;
+			var y = x * 3.280839895;
+			var out = document.getElementById('output');
+			out.innerHTML = y;
+		}
+	</script>
+	<style>
+		#middle {
+			background-color: black;
+			margin-left: 5px;
+			margin-right: 5px;
+			border: 1px solid black;
+		}
+		h1 {
+			font-family: Georgia;
+		}
+		.inOut {
+			background-color: #CAE1FF;
+			height: 30px;
+			width: 200px;
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+		.interact td {
+			width: 150px;
+		}
+		th td {
+			text-align: center;
+		}
+		#scrollTable {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 100%;
+			overflow: auto;
+		}
+		.conversions tr td {
+			border: 1px solid #B3B3B3;
+		}
+		#feetMeters {
+			text-decoration: none;
+			color: #CD853F;
+		}
+		#feetMeters:hover {
+			text-decoration: underline;
+			color: red;
+		}
+		#top {
+			margin-top: 5px;
+			margin-left: 5px;
+			margin-right: 5px;
+			height: 70px;
+			background-color: #4e9ad5;
+			background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+			background-position: 15px 15px;
+			background-image: linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px), linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px), linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+			background-image: -webkit-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), -webkit-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px), -webkit-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px), -webkit-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+			background-image: -moz-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), -moz-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px), -moz-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px), -moz-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+			background-image: -ms-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), -ms-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px), -ms-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px), -ms-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+			background-image: -o-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), -o-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px), -o-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px), -o-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+		}
+		.button {
+			text-align: center;
+		}
+		.email {
+			text-decoration: underline;
+			color: #0000FF;
+		}
+	</style>
+</head>
+
+<div id="top">
+     <h1>Meters to Feet converter</h1>
+
+</div>
+<div id="middle">
+    <table>
+        <tr>
+            <td width="450px"> <a href="http://www.meters-to-feet.com/feet-to-meters.php" id="feetMeters">Convert Feet to Meters</a>
+            </td>
+            <td><font color="white">Search:</font>
+            </td>
+            <td>
+                <input type="text" />
+            </td>
+        </tr>
+    </table>
+</div>
+<table class="interact" style="margin-top:150px;" align="center">
+    <th colspan="3">Convert your meters here!</th>
+    <tr>
+        <td>meters (m)</td>
+        <td></td>
+        <td>feet (ft)</td>
+    </tr>
+    <tr>
+        <td class="inOut">
+            <input type="text" id="input" style="background-color:transparent;border:0px solid white;" />
+        </td>
+        <td class="button">
+            <input type="submit" value="Convert" onclick="metersFeet()" />
+        </td>
+        <td class="inOut" id="output"></td>
+    </tr>
+    <tr>
+        <td>1 m = 3.2808399 ft</td>
+        <td></td>
+        <td>1 ft = 0.3048 m</td>
+    </tr>
+</table>
+<table style="margin-top:50px;" align="center">
+    <tr>
+        <td><strong>Algebraic Steps / Dimensional Analysis Formula</strong>
+
+        </td>
+    </tr>
+    <tr>
+        <td>1m = 100cm/1m * 1in/2.54cm * 1ft/12in = 3.280839895 ft</td>
+    </tr>
+    <tr height="10px">
+        <td></td>
+    </tr>
+    <tr>
+        <td><strong>Direct Conversion Formula</strong>
+
+        </td>
+    </tr>
+    <tr>
+        <td>1m * 1ft/0.3048m = 3.280839895 ft</td>
+    </tr>
+</table>
+<div id="scrollTable" style="margin-top:50px;" align="center">
+    <table class="conversions">
+        <th colspan="10">Quick lookup: meters to feet</th>
+        <tbody>
+            <tr>
+                <td>Meters</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Feet</td>
+                <td>3.2808</td>
+                <td>6.5617</td>
+                <td>9.8425</td>
+                <td>13.1234</td>
+                <td>16.4042</td>
+                <td>19.685</td>
+                <td>22.9659</td>
+                <td>26.2467</td>
+                <td>29.5276</td>
+                <td>32.8084</td>
+                <td>36.0892</td>
+                <td>39.3701</td>
+                <td>42.6509</td>
+                <td>45.9318</td>
+                <td>49.2126</td>
+                <td>52.4934</td>
+                <td>55.7743</td>
+                <td>59.0551</td>
+                <td>62.336</td>
+                <td>65.6168</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<table class="conversions" style="margin-top:50px;" align="center">
+    <th colspan="2">Conversion to common lengths</th>
+    <tr>
+        <td>Inches</td>
+        <td>39.37007874</td>
+    </tr>
+    <tr>
+        <td>Feet</td>
+        <td>3.280839895</td>
+    </tr>
+    <tr>
+        <td>Yards</td>
+        <td>1.093613298</td>
+    </tr>
+    <tr>
+        <td>Miles</td>
+        <td>0.0006213711922</td>
+    </tr>
+    <tr>
+        <td>Nautical Miles</td>
+        <td>0.0005399568035</td>
+    </tr>
+    <tr>
+        <td>Light-years</td>
+        <td>1.056998307e-16</td>
+    </tr>
+    <tr>
+        <td>Centimeters</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>Meters</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Kilometers</td>
+        <td>0.001</td>
+    </tr>
+</table>
+<p>Contact us: <font class="email">admin@lisaconverter.com</font>
+</p>
+

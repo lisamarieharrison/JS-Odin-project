@@ -1,0 +1,97 @@
+<head>
+	<script>
+	
+		//add two numbers 
+		function add(x, y) {
+			var z = x + y
+			return z
+		}
+
+		console.log(add(1, 2))
+		
+		//multiply two numbers
+		function multiply(x, y) {
+			var z = x*y
+			return z
+		}
+		
+		console.log(multiply(1, 2))
+		
+		//divide two numbers
+		function divide(x, y) {
+			var z = x/y
+			return z
+		}
+		
+		console.log(divide(1, 2))	
+		
+		//subtract two numbers
+		function subtract(x, y) {
+			var z = x - y
+			return z
+		}
+		
+		console.log(subtract(1, 2))	
+		
+		//numButton function
+		function numButton(x){
+			console.log(x)
+		}
+		
+		//clearButton function
+		function clearButton() {
+			
+		}
+		var firstNumber
+		
+		//equals function
+		function equals() {
+			
+		}
+		
+	</script>
+	<style>
+	div {
+		width: 400px;
+		heigth: 1000px;
+	}
+	div div {
+		width: 80px;
+		height: 100px;
+		border: 2px solid black;	
+		float: left;
+		text-align: center;
+		vertical-align: middle;
+		font-size: 40px;
+		border-radius: 25%;
+		line-height: 100px;
+		background-color: #B0E2FF;
+		margin: 5px;
+	}
+	
+	</style>
+</head>
+
+<body>
+	<div>
+		<div onClick="numButton(1)">1</div>
+		<div onClick="numButton(2)">2</div>
+		<div onClick="numButton(3)">3</div>
+		<div onClick="add(firstNumber, secondNumber)">+</div>
+		<div onClick="numButton(4)">4</div>
+		<div onClick="numButton(5)">5</div>
+		<div onClick="numButton(6)">6</div>
+		<div onClick="subtract(firstNumber, secondNumber)">-</div>
+		<div onClick="numButton(7)">7</div>
+		<div onClick="numButton(8)">8</div>
+		<div onClick="numButton(9)">9</div>
+		<div onClick="multiply(firstNumber, secondNumber)">*</div>
+		<div onClick="numButton(0)">0</div>
+		<div onClick="clearButton()">Clr</div>
+		<div onClick="">=</div>
+		<div onClick="divide(firstNumber, secondNumber)">/</div>
+	</div>
+</body>
+
+
+
