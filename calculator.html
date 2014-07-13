@@ -8,6 +8,8 @@
 		
 		//add two numbers 
 		function add(x, y) {
+			x = parseInt(x)
+			y = parseInt(y)
 			var z = x + y
 			return z
 		}
@@ -60,36 +62,51 @@
 		
 		//addButton function
 		function addButton() {
-			funType = add
-			firstNumber = parseInt(startNumber)
+			if (firstNumber != "") {
+				firstNumber = funType(firstNumber, startNumber)
+			} else {
+				firstNumber = parseInt(startNumber)
+			}
 			startNumber = ""
+			funType = add
 			return funType
 		}
 			
 		//subtractButton function
 		function subtractButton() {
+			if (firstNumber != "") {
+				firstNumber = funType(firstNumber, startNumber)
+			} else {
+				firstNumber = parseInt(startNumber)
+			}
 			funType = subtract
-			firstNumber = parseInt(startNumber)
 			startNumber = ""
 			return funType
 		}
 			
 		//multiplyButton function
 		function multiplyButton() {
-			funType = multiply
-			firstNumber = parseInt(startNumber)
+			if (firstNumber != "") {
+				firstNumber = funType(firstNumber, startNumber)
+			} else {
+				firstNumber = parseInt(startNumber)
+			}
 			startNumber = ""
+			funType = multiply
 			return funType
 		}
 			
 		//divideButton function
 		function divideButton() {
-			funType = divide
-			firstNumber = parseInt(startNumber)
+			if (firstNumber != "") {
+				firstNumber = funType(firstNumber, startNumber)
+			} else {
+				firstNumber = parseInt(startNumber)
+			}
 			startNumber = ""
+			funType = divide
 			return funType
 		}
-		
 		
 	</script>
 	<style>
