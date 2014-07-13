@@ -42,6 +42,7 @@
 			if (startNumber == 80085) {
 				var out = document.getElementById('displayBar')
 				out.innerHTML = "Bad person!"
+				out.style.backgroundColor = "red"
 			} else {
 				var out = document.getElementById('displayBar')
 				out.innerHTML = startNumber
@@ -131,6 +132,7 @@
 		width: 400px;
 		heigth: 1000px;
 	}
+	
 	div div:not(:first-child) {
 		width: 80px;
 		height: 100px;
@@ -139,35 +141,52 @@
 		text-align: center;
 		vertical-align: middle;
 		font-size: 40px;
-		border-radius: 25%;
+		border-radius: 25px;
 		line-height: 100px;
 		margin: 5px;
 	}
 	
+	div div:not(:first-child):active {
+		background-color: #F08080;
+	}
+
 	#displayBar {
 		height: 100px;
-		width: 370px;
+		width: 360px;
 		border: 2px solid black;	
-		border-radius: 20%;
+		border-radius: 20px;
 		background-color: #E3E3E3;
 		margin: 5px;
 		font-size: 50px;
-		vertical-align: middle;
+		line-height: 100px;
 		text-align: right;
-		display: table-cell;
+		padding-right: 5px;
 	}
 	
 	.funButton {
 		background-color: #C1FFC1;
 	}
 	
+	.funButton:hover {
+		background-color: #B4EEB4;
+	}
+	
 	.numbers {
 		background-color: #B0E2FF;
 	}
 
+	.numbers:hover {
+		background-color: #A4D3EE;
+	}
 	.set {
 		background-color: #FFFACD;	
 	}
+	
+	.set:hover {
+		background-color: #FFF68F;	
+	}
+	
+	
 	
 	</style>
 </head>
