@@ -39,6 +39,13 @@
 		//numButton function
 		function numButton(x){
 			startNumber = startNumber + x
+			if (startNumber == 80085) {
+				var out = document.getElementById('displayBar')
+				out.innerHTML = "Bad person!"
+			} else {
+				var out = document.getElementById('displayBar')
+				out.innerHTML = startNumber
+			}
 		}
 		
 		//clearButton function
@@ -47,7 +54,8 @@
 			firstNumber = ""
 			secondNumber = ""
 			funType = undefined
-			console.log(0)
+			var out = document.getElementById('displayBar')
+			out.innerHTML = 0
 		}
 		
 		//equals function
@@ -57,13 +65,16 @@
 			startNumber = ""
 			firstNumber = ""
 			secondNumber = ""
-			console.log(z)
+			var out = document.getElementById('displayBar')
+			out.innerHTML = z
 		}
 		
 		//addButton function
 		function addButton() {
 			if (firstNumber != "") {
 				firstNumber = funType(firstNumber, startNumber)
+				var out = document.getElementById('displayBar')
+				out.innerHTML = firstNumber
 			} else {
 				firstNumber = parseInt(startNumber)
 			}
@@ -76,6 +87,8 @@
 		function subtractButton() {
 			if (firstNumber != "") {
 				firstNumber = funType(firstNumber, startNumber)
+				var out = document.getElementById('displayBar')
+				out.innerHTML = firstNumber
 			} else {
 				firstNumber = parseInt(startNumber)
 			}
@@ -88,6 +101,8 @@
 		function multiplyButton() {
 			if (firstNumber != "") {
 				firstNumber = funType(firstNumber, startNumber)
+				var out = document.getElementById('displayBar')
+				out.innerHTML = firstNumber
 			} else {
 				firstNumber = parseInt(startNumber)
 			}
@@ -100,6 +115,8 @@
 		function divideButton() {
 			if (firstNumber != "") {
 				firstNumber = funType(firstNumber, startNumber)
+				var out = document.getElementById('displayBar')
+				out.innerHTML = firstNumber
 			} else {
 				firstNumber = parseInt(startNumber)
 			}
@@ -114,7 +131,7 @@
 		width: 400px;
 		heigth: 1000px;
 	}
-	div div {
+	div div:not(:first-child) {
 		width: 80px;
 		height: 100px;
 		border: 2px solid black;	
@@ -124,8 +141,32 @@
 		font-size: 40px;
 		border-radius: 25%;
 		line-height: 100px;
-		background-color: #B0E2FF;
 		margin: 5px;
+	}
+	
+	#displayBar {
+		height: 100px;
+		width: 370px;
+		border: 2px solid black;	
+		border-radius: 20%;
+		background-color: #E3E3E3;
+		margin: 5px;
+		font-size: 50px;
+		vertical-align: middle;
+		text-align: right;
+		display: table-cell;
+	}
+	
+	.funButton {
+		background-color: #C1FFC1;
+	}
+	
+	.numbers {
+		background-color: #B0E2FF;
+	}
+
+	.set {
+		background-color: #FFFACD;	
 	}
 	
 	</style>
@@ -133,22 +174,23 @@
 
 <body>
 	<div>
-		<div onClick="numButton(1)">1</div>
-		<div onClick="numButton(2)">2</div>
-		<div onClick="numButton(3)">3</div>
-		<div onClick="addButton()">+</div>
-		<div onClick="numButton(4)">4</div>
-		<div onClick="numButton(5)">5</div>
-		<div onClick="numButton(6)">6</div>
-		<div onClick="subtractButton()">-</div>
-		<div onClick="numButton(7)">7</div>
-		<div onClick="numButton(8)">8</div>
-		<div onClick="numButton(9)">9</div>
-		<div onClick="multiplyButton()">*</div>
-		<div onClick="numButton(0)">0</div>
-		<div onClick="clearButton()">Clr</div>
-		<div onClick="equals()">=</div>
-		<div onClick="divideButton()">/</div>
+		<div id="displayBar">0</div>
+		<div class="numbers" onClick="numButton(1)">1</div>
+		<div class="numbers" onClick="numButton(2)">2</div>
+		<div class="numbers" onClick="numButton(3)">3</div>
+		<div class="funButton" onClick="addButton()">+</div>
+		<div class="numbers" onClick="numButton(4)">4</div>
+		<div class="numbers" onClick="numButton(5)">5</div>
+		<div class="numbers" onClick="numButton(6)">6</div>
+		<div class="funButton" onClick="subtractButton()">-</div>
+		<div class="numbers" onClick="numButton(7)">7</div>
+		<div class="numbers" onClick="numButton(8)">8</div>
+		<div class="numbers" onClick="numButton(9)">9</div>
+		<div class="funButton" onClick="multiplyButton()">*</div>
+		<div class="set" onClick="clearButton()">Clr</div>
+		<div class="numbers" onClick="numButton(0)">0</div>
+		<div class="set" onClick="equals()">=</div>
+		<div class="funButton" onClick="divideButton()">/</div>
 	</div>
 </body>
 
