@@ -1,0 +1,176 @@
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script>
+	$(document).ready(function(){
+		title = $('<p>').text("Harrison's on the Bay")
+		$('#content').append(title);
+		$('#content').append("<img src='http://concreteplayground.com.au/_snacks/wp-content/uploads/2013/09/Views-1.jpg'/>");
+		
+		//Add the tabs and tab content location
+		var tabDiv = $('<div>').attr('id', 'tabs');
+		$('body').append(tabDiv);
+		var tabs = $('<ul>');
+		var aboutCell = $('<li>').attr('id', 'aboutTab').attr('class', 'tabButton').text("About Us");
+		var foodCell = $('<li>').attr('id', 'foodTab').attr('class', 'tabButton').text("Food");
+		var drinksCell = $('<li>').attr('id', 'drinksTab').attr('class', 'tabButton').text("Drinks");
+		var contactCell = $('<li>').attr('id', 'contactTab').attr('class', 'tabButton').text("Contact");
+		tabs.append(aboutCell).append(foodCell).append(drinksCell).append(contactCell);
+		$('#tabs').append(tabs);
+		
+		//About tab
+		var aboutList = $('<ul>').attr('class', 'menuItems');
+		var f1 = $('<li>').text("Our restaurant is situated on Kennedy Bay and specialises in Modern Australian Cuisine. We have an extensive cocktail list and are open 7 days a week. Our restaurant is the only dining establishment in Australia that also has a pet menu so that your furry friend can have a meal too.");
+		aboutList.append(f1);	
+		$('#tabs').append($('<div>').attr('id', 'tabContent').append(aboutList));
+		
+		//Main menu
+		var menuList = $('<ul>').attr('class', 'menuItems');
+		var f1 = $('<li>').text("Main Courses");
+		var f2 = $('<li>').text("Grilled gnocchi, napoli sauce and a mild blue cheese sauce (vo) $29.80");
+		var f3 = $('<li>').text("Beer battered whiting with chips, salad & aioli $28.90");
+		var f4 = $('<li>').text("Garlic prawns with garlic & chilli, served with steamed rice (gf) $48.80");
+		menuList.append(f1).append(f2).append(f3).append(f4);	
+		
+		//Drinks menu
+		var drinksList = $('<ul>').attr('class', 'menuItems');
+		var f1 = $('<li>').text("Cocktail List");
+		var f2 = $('<li>').text("Sherry Cobbler: Manzanilla Sherry, Orange, Lemon & Caster Sugar $15");
+		var f3 = $('<li>').text("Caipirinha: Leblon, lime & Suger $15");
+		var f4 = $('<li>').text("Penicillin: Dewars 12, Lemon, Honey Syrup, Ardbeg & Ginger Juice $15");
+		drinksList.append(f1).append(f2).append(f3).append(f4);	
+		
+		//Contact details
+		var contactList = $('<ul>').attr('class', 'menuItems');
+		var f1 = $('<li>').text("Contact Details");
+		var f2 = $('<li>').text("Phone: (08) 9531 3215");
+		var f3 = $('<li>').text("Fax: (08) 9531 3222");
+		var f4 = $('<li>').text("Address: 15 Baltimore Loop, Kennedy Bay, WA");
+		contactList.append(f1).append(f2).append(f3).append(f4);	
+		
+		//Changes content when tab is clicked
+		$('.tabButton').click(function() {
+			$('#tabContent').empty();
+			
+			if ($(this).attr('id') == 'aboutTab') {
+				$('#tabContent').append(aboutList);
+				$('#tabContent').css("background-color", "#B0E2FF");
+			}
+			
+			if ($(this).attr('id') == 'foodTab') {
+				$('#tabContent').append(menuList);
+				$('#tabContent').css("background-color", "#EEDC82");
+			}
+			if ($(this).attr('id') == 'drinksTab') {
+				$('#tabContent').append(drinksList);
+				$('#tabContent').css("background-color", "#FFC1C1");
+			}
+			if ($(this).attr('id') == 'contactTab') {
+				$('#tabContent').append(contactList);
+				$('#tabContent').css("background-color", "#F4A460");
+			}	
+		})
+		
+	});
+	</script>
+	<style>
+	
+	body {
+		background-color: #FFFACD;
+		background-image: linear-gradient(90deg, rgba(238, 220, 130, 0.5) 50%, transparent 50%),
+		linear-gradient(rgba(238, 220, 130, 0.5) 50%, transparent 50%);
+		background-size:50px 50px;
+	}
+	
+	#content {
+		text-align: center;
+	}
+	
+	div {
+		width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		}
+		
+	div img {
+		width: 100%;
+		align: centre;
+		margin-bottom: 15px;
+		border: 2px solid black;
+	}
+	
+	.tabButton {
+		width: 80px;
+		height: 40px;
+		border: 2px solid black;
+		text-align: center;
+		border-radius: 10px;
+		display: inline-block;
+	}
+	
+	
+	#foodTab {
+		background-color: #EEDC82;
+	}
+	
+	#foodTab:hover {
+		background-color: #FFFACD;
+	}
+	
+	#aboutTab {
+		background-color: #B0E2FF;
+	}
+	
+	#aboutTab:hover {
+		background-color: #C6E2FF;
+	}
+	
+	#drinksTab {
+		background-color: #FFC1C1;
+	}
+	
+	#drinksTab:hover {
+		background-color: #FFE4E1;
+	}
+	
+	#contactTab {
+		background-color: #F4A460;
+	}
+	
+	#contactTab:hover {
+		background-color: #FFDAB9;
+	}
+
+	ul {
+		margin-bottom: 0px;
+		padding-left:  0px;
+	}
+	
+	#tabContent {
+		border: 2px solid black;
+		text-align: center;
+		border-radius: 10px;	
+		background-color: #B0E2FF;
+		padding-bottom: 10px;
+	}
+	
+	.menuItems {
+		padding: 0px;
+		list-style-type: none;
+	}
+	
+	#content p {
+		font-size: 40px;
+		font-family: Lucida Calligraphy Italic, Cursive;
+		font-weight: Bold;
+		color: #FF6A6A;
+	}
+	
+	
+	</style>
+	<body>
+	<div id="content"></div>
+	</body>
+<head>
+
+
