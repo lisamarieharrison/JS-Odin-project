@@ -1,0 +1,13 @@
+#grid {
+	border: 2px solid black;
+	width: 480px;
+	height: 480px;
+}
+
+.cell {
+	border: 1px solid gray;
+	width: 10px;
+	height: 10px;
+	float: left;
+}
+
