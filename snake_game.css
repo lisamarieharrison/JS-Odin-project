@@ -1,13 +1,44 @@
 #grid {
 	border: 2px solid black;
-	width: 480px;
+	width: 480;
 	height: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
 }
 
 .cell {
-	border: 1px solid gray;
+	border: 1px solid #d1ed82;
 	width: 10px;
 	height: 10px;
 	float: left;
 }
 
+#gameOver {
+	text-align: center;
+	font-size: 100px;
+	margin-bottom: 5px; 
+}
+
+#restart {
+	padding-top: 5px;
+	height: 40px;
+	width: 100px;
+	border: 2px solid black;
+	text-align: center;
+	border-radius: 10px;
+	line-height: 20px;
+}
+
+#highScore {
+	text-align: center;
+	font-size: 15px;
+}
+
+h1 {
+	text-align: center;
+}
+
+div {
+	text-align: center;
+}
