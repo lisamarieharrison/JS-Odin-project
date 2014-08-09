@@ -2,13 +2,19 @@
 	width: 50px;
 	height: 50px;
 	display: inline-block;
-	margin-bottom: 77px;
+	margin-bottom: 177px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.arrow:hover {
+	opacity: 0.5;
 }
 
 #displayDiv {
 	margin-left: auto;
 	margin-right: auto;
-	width: 720px;
+	width: 752px;
 }
 
 #dotContainer {
@@ -30,23 +36,27 @@
 	display: inline-block;
 }
 
+.dots:hover {
+	opacity: 0.5;
+}
+
 h1 {
 	text-align: center;
 }
 
 .image{
 	width: 600px;
-	height: 200px;
+	height: 400px;
 }
 
 #imageDiv {
 	width: 1812px;
-	height: 200px;
+	height: 400px;
 }
 
 #pictureFrame {
 	width: 600px;
-	height: 200px;
+	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;

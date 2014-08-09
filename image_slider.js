@@ -69,3 +69,7 @@ function move3() {
 	currentImage = 3
 	$("#dot" + currentImage).css("background-color", "black"); //change new dot colour to black	
 }
+
+
+//advance puppies automatically
+autoMove = setInterval(next, 5000);
