@@ -1,0 +1,26 @@
+#dots {
+
+}
+
+h1 {
+	text-align: center;
+}
+
+.image{
+	width: 600px;
+	height: 200px;
+}
+
+#imageDiv {
+	width: 1812px;
+	height: 200px;
+}
+
+#pictureFrame {
+	width: 600px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	border: 2px solid black;
+}
