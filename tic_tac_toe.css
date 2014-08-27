@@ -1,0 +1,15 @@
+#board {
+	border: 2px solid black;
+	height: 312px;
+	width: 312px;
+}
+
+.cell {
+	border: 2px solid black;
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	font-size: 80px;
+}
