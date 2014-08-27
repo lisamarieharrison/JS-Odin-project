@@ -1,0 +1,15 @@
+#grid {
+	border: 2px solid black;
+	width: 288;
+	height: 288px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+}
+
+.cell {
+	border: 1px solid grey;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
