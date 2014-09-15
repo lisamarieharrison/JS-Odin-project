@@ -17,6 +17,9 @@ $(document).ready(function() {
 
 });
 
+//run display canvas outside of document ready once all images have loaded
+//add listener to check if images have loaded
+
 function displayCanvas() {
 	var canvas = document.getElementById('canvas'); 
 	var c = canvas.getContext('2d'); 
@@ -35,16 +38,20 @@ function displayCanvas() {
 		c.drawImage(bunkerImg, 200, 185);
 	}
 
+	//get background information for removing images
+
+
 	//add 5 missiles to each bunker
 	missileImg.onload = function() {
-		for (var i = 0; i < 5; i++) {
-			c.drawImage(missileImg, missileImg.locationXBunker1[i], missileImg.locationYBunker1[i]);
-		}
 	}	
 
-	return(canvas);
+	for (var i = 0; i < 5; i++) {
+		c.drawImage(missileImg, missileImg.locationXBunker1[i], missileImg.locationYBunker1[i]);
+	}
 
+	return canvas;
 }
+
 
 function launchMissile(e) {
 
@@ -55,16 +62,37 @@ function launchMissile(e) {
   	y -= canvas.offsetTop;
 
 	console.log("Missile Launched!")
-	console.log([x, y]);
+
+	var dx = x - missileImg.locationXBunker1[1];
+	var dy = missileImg.locationYBunker1[1] - y;
+	missileImg.angle = Math.atan(dy/dx);
+
+	missileImg.newLocationX = missileImg.locationXBunker1[1] + Math.cos(missileImg.angle);
+	missileImg.newLocationY = missileImg.locationYBunker1[1] - Math.sin(missileImg.angle);
+
+	step();
+
 }
 
+function step() {
+
+	var canvas = document.getElementById('canvas'); 
+	var c = canvas.getContext('2d'); 
+
+	requestAnimationFrame(step);
 
 
+	//remove current image
+	c.clearRect(missileImg.newLocationX,missileImg.newLocationY,missileImg.newLocationX + missileImg.width ,missileImg.newLocationY + missileImg.height );
+	displayCanvas();
 
+	//make new coordinates
+	missileImg.newLocationX = missileImg.newLocationX + Math.cos(missileImg.angle);
+	missileImg.newLocationY = missileImg.newLocationY - Math.sin(missileImg.angle);
 
+	c.drawImage(missileImg, missileImg.newLocationX, missileImg.newLocationY);
 
-
-
+}
 
 
 
