@@ -1,0 +1,23 @@
+<head>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeojBUXz1epYAA9R0U3DLtlwD4URFo5FM"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="google_maps.js"></script>
+	<link rel="stylesheet" type="text/css" href="google_maps.css">
+	<body>
+		<div id="header">
+			<h1>Find Your House on Google Maps!</h1>
+		</div>
+		<h3>Enter your house coordinates:</h3>
+		<div id="input">
+			Latitude:<input type="text" id="latitudeInput" border:"0px solid black" align:"centre"/>
+			<p>Longitude:<input type="text" id="longitudeInput" border:"0px solid black" align:"centre"/></p>
+			<p>
+				<input type="submit" class="button" value="Go" onclick="findLocation()" />
+				<input type="submit" class="button" value="Reset" onclick="reset()" />
+			</p>
+		</div>
+		<div id="map-canvas"></div>
+	</body>
+<head>
+
+

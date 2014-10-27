@@ -1,0 +1,44 @@
+body {
+	background-color: #F8FAF7;
+	margin: 0px;
+}
+
+.button {
+	background-color: #AFE3AF;
+}
+
+#header {
+	text-align: center;
+	color: #EB6060;
+	background-color: #AFE3AF;
+	border-top: 2px solid #84C284;
+	border-bottom: 2px solid #84C284;
+}
+
+h3 {
+	text-align: center;
+	color: #87C1FA;
+}
+
+div {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gm-style-iw {
+	width: 100%;
+}
+
+#map-canvas {
+	width: 500px;
+	height: 500px;
+	border: 2px solid #84C284;
+}
+
+.mapIconLabel {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: 'DINNextRoundedLTProMediumRegular';
+}
